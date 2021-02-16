@@ -1,0 +1,2 @@
+C:\Users\DireStrait\source\repos\ReverseString\Debug\ReverseString.exe
+C:\Users\DireStrait\source\repos\ReverseString\Debug\ReverseString.pdb
