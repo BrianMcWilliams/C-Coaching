@@ -5,26 +5,62 @@
 
 using namespace std;
 
-const char* originalString = "Racecar is a palindrome";
+struct Node {
+public:
+	Node(int value)
+	{
+		m_Value = value;
+		m_Next = nullptr;
+	}
+	int m_Value;
+	Node* m_Next;
+};
 
-void ReverseString(char* stringToReverse)
+Node* PopulateLinkedList()
 {
+	Node* listHead = new Node(0);
 
+	Node* currentElement = listHead;
+
+ 	for (int i = 1; i < 10; ++i)
+	{
+		currentElement->m_Next = new Node(i);
+		currentElement = currentElement->m_Next;
+	}
+
+	return listHead;
+}
+
+void OutputToConsole(Node* head)
+{
+	Node* currentElement = head;
+
+	while (currentElement != nullptr)
+	{
+		Node* next = currentElement->m_Next;
+		cout << "Node" << endl;
+		cout << "Value: " << currentElement->m_Value << endl;
+		cout << "Next: " << next << endl;
+		cout << "= = = =" << endl;
+
+		currentElement = currentElement->m_Next;
+	}
 }
 
 int main(void)
 {
-	void* memory = malloc(0x50);
+	Node* head = PopulateLinkedList();
 
-	assert(memory != 0);
+	OutputToConsole(head);
+
+
+	//Problem 1: 
+	//Add a node in the middle of the list
 	
-	strcpy_s((char*)memory, sizeof(char) * 50 , originalString);
-	char* strPtr = (char*)memory;
+	//Problem 2
+	//Remove the second node from the list.
 
-	cout << "Let's reverse this string : " << (char*)memory << endl;
-
-	ReverseString(strPtr);
-	
-	cout << "Here's the reversed string : " << (char*)memory << endl;
+	//Problem 3
+	//Invert the list (back to front)
 	system("pause");
 }

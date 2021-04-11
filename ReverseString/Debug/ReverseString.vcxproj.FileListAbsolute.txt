@@ -1,2 +1,4 @@
 C:\Users\DireStrait\source\repos\ReverseString\Debug\ReverseString.exe
 C:\Users\DireStrait\source\repos\ReverseString\Debug\ReverseString.pdb
+C:\Dev\C++Coaching\ReverseString\Debug\ReverseString.exe
+C:\Dev\C++Coaching\ReverseString\Debug\ReverseString.pdb
